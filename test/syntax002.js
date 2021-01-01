@@ -1,0 +1,15 @@
+var isEven = false;
+console.log(isEven);
+console.log(typeof (isEven));
+var baza = 5;
+var hexa = 0xf00d;
+var binar = 10;
+//let numar_mare: bigint = 100n;
+console.log(baza);
+console.log(typeof (baza));
+console.log(hexa);
+console.log(typeof (hexa));
+console.log(binar);
+console.log(typeof (binar));
+//console.log(numar_mare);
+//console.log(typeof(numar_mare));
