@@ -1,3 +1,5 @@
-interface Router {
+export module router {
+    export interface Router {
 
+    }
 }
