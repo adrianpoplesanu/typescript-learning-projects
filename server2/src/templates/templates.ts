@@ -1,3 +1,5 @@
-interface Template {
+export module template {
+    export interface TemplateRendererInterface {
 
+    }
 }

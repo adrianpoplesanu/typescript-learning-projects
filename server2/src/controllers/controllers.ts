@@ -1,3 +1,5 @@
-interface Controller {
+export module controller {
+    export interface Controller {
 
+    }
 }
