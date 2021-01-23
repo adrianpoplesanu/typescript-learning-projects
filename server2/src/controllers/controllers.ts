@@ -1,5 +1,5 @@
 export module controller {
-    export interface Controller {
-
+    export interface ControllerInterface {
+        init(): void;
     }
 }
