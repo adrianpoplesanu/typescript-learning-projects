@@ -6,6 +6,7 @@ var router;
     class Router {
         constructor() {
             console.log("instantiating Router...");
+            this.routes = new Array();
         }
         addRoute(route_bind) {
             this.routes.push(route_bind);

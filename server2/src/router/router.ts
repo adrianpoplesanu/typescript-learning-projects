@@ -9,6 +9,7 @@ export module router {
         routes: Array<RouterBind>;
         constructor() {
             console.log("instantiating Router...");
+            this.routes = new Array<RouterBind>();
         }
         addRoute(route_bind: RouterBind) {
             this.routes.push(route_bind);

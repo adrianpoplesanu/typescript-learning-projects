@@ -10,9 +10,15 @@ let r = new router.Router();
 r.addRawRoute("/hello", "BaseController", "index", "GET");
 //eval("console.log('testing eval');");
 
-let add_routes_listeners = function (r : router.Router) {
-
+let add_routes_listeners = function (e : express.Express, r : router.Router) {
+    //for (bind in r.
+    app.get('/check2.txt', (req, res) => {
+        // low level check, without route binds and controller/action calls
+        res.send("Status 200 OK!");
+    });
 }
+
+add_routes_listeners(app, r);
 
 app.listen(8090, function () {
     console.log('App listening on port 8090!');
