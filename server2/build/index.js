@@ -9,7 +9,10 @@ let r = new router_1.router.Router();
 r.addRawRoute("/hello", "BaseController", "index", "GET");
 //eval("console.log('testing eval');");
 let add_routes_listeners = function (e, r) {
-    //for (bind in r.
+    console.log(r);
+    r.routes.forEach(function (route_bind) {
+        console.log(route_bind.route);
+    });
     app.get('/check2.txt', (req, res) => {
         // low level check, without route binds and controller/action calls
         res.send("Status 200 OK!");

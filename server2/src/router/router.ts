@@ -14,8 +14,8 @@ export module router {
         addRoute(route_bind: RouterBind) {
             this.routes.push(route_bind);
         }
-        addRawRoute(route: string, contoller: string, action: string, method: string) {
-            let route_bind = new RouterBind();
+        addRawRoute(route: string, controller: string, action: string, method: string) {
+            let route_bind = new RouterBind(route, controller, action, method);
             this.routes.push(route_bind);
         }
     }
@@ -25,5 +25,12 @@ export module router {
         controller: string;
         action: string;
         method: string;
+
+        constructor(route: string, controller: string, action: string, method: string) {
+            this.route = route;
+            this.controller = controller;
+            this.action = action;
+            this.method = method;
+        }
     }
 }

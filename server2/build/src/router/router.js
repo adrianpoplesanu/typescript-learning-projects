@@ -11,13 +11,19 @@ var router;
         addRoute(route_bind) {
             this.routes.push(route_bind);
         }
-        addRawRoute(route, contoller, action, method) {
-            let route_bind = new RouterBind();
+        addRawRoute(route, controller, action, method) {
+            let route_bind = new RouterBind(route, controller, action, method);
             this.routes.push(route_bind);
         }
     }
     router.Router = Router;
     class RouterBind {
+        constructor(route, controller, action, method) {
+            this.route = route;
+            this.controller = controller;
+            this.action = action;
+            this.method = method;
+        }
     }
 })(router = exports.router || (exports.router = {}));
 //# sourceMappingURL=router.js.map
