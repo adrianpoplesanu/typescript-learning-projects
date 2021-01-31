@@ -2,7 +2,7 @@ export module router {
     export interface RouterInterface {
         routes: Array<RouterBind>;
         addRoute(router_bind: RouterBind): void;
-        addRawRoute(route: string, contoller: string, action: string, method: string): void;
+        addRawRoute(route: string, contoller: any, action: any, method: string): void;
     }
 
     export class Router implements RouterInterface {
@@ -14,7 +14,7 @@ export module router {
         addRoute(route_bind: RouterBind) {
             this.routes.push(route_bind);
         }
-        addRawRoute(route: string, controller: string, action: string, method: string) {
+        addRawRoute(route: string, controller: any, action: any, method: string) {
             let route_bind = new RouterBind(route, controller, action, method);
             this.routes.push(route_bind);
         }
@@ -22,11 +22,11 @@ export module router {
 
     class RouterBind {
         route: string;
-        controller: string;
-        action: string;
+        controller: any;
+        action: any;
         method: string;
 
-        constructor(route: string, controller: string, action: string, method: string) {
+        constructor(route: string, controller: any, action: any, method: string) {
             this.route = route;
             this.controller = controller;
             this.action = action;
