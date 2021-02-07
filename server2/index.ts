@@ -21,6 +21,14 @@ let add_routes_listeners = function (r : router.Router) {
                  res.send(result);
             });
         }
+        if (route_bind.method == 'POST') {
+            app.post(route_bind.route, (req, res) => {
+                 let result = 'Unimplemented, check the middleware';
+                 let controller = new route_bind.controller();
+                 eval('result = controller.' + route_bind.action + '();');
+                 res.send(result);
+            });
+        }
     });
     app.get('/check2.txt', (req, res) => {
         // low level check, without route binds and controller/action calls
