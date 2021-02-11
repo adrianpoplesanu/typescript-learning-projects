@@ -8,6 +8,7 @@ const app = express();
 app.use(express.static('public'));
 let r = new router_1.router.Router();
 r.addRawRoute("/hello", base_1.BaseController, "index", "GET");
+r.addRawRoute("/buna-dimineata", base_1.BaseController, "index2", "GET");
 //eval("console.log('testing eval');");
 let add_routes_listeners = function (r) {
     r.routes.forEach(function (route_bind) {
@@ -15,7 +16,7 @@ let add_routes_listeners = function (r) {
             app.get(route_bind.route, (req, res) => {
                 let result = 'Unimplemented, check the middleware';
                 let controller = new route_bind.controller();
-                eval('result = controller.' + route_bind.action + '();');
+                eval('result = controller.' + route_bind.action + '(req, res);');
                 res.send(result);
             });
         }

@@ -9,6 +9,7 @@ app.use(express.static('public'));
 
 let r = new router.Router();
 r.addRawRoute("/hello", BaseController, "index", "GET");
+r.addRawRoute("/buna-dimineata", BaseController, "index2", "GET");
 //eval("console.log('testing eval');");
 
 let add_routes_listeners = function (r : router.Router) {
@@ -17,7 +18,7 @@ let add_routes_listeners = function (r : router.Router) {
             app.get(route_bind.route, (req, res) => {
                  let result = 'Unimplemented, check the middleware';
                  let controller = new route_bind.controller();
-                 eval('result = controller.' + route_bind.action + '();');
+                 eval('result = controller.' + route_bind.action + '(req, res);');
                  res.send(result);
             });
         }

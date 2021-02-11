@@ -9,7 +9,8 @@ class BaseController {
         return 'aaaDefault response from BaseController - mizeria ordinara nu a mers pana nu am pasat direct referinta controllerului';
     }
     index2(req, res) {
-        return 'Default response from BaseController';
+        console.log(res);
+        return 'Default response from BaseController with req/res params';
     }
 }
 exports.BaseController = BaseController;
