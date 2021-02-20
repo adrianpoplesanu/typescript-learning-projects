@@ -1,4 +1,6 @@
 import { controller } from "./controllers"
+import { templates } from "./../templates/templates"
+
 
 export class BaseController implements controller.ControllerInterface {
     init(): void {

@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.template = void 0;
-var template;
-(function (template) {
+exports.templates = void 0;
+var templates;
+(function (templates) {
     class TemplateRenderer {
     }
-    template.TemplateRenderer = TemplateRenderer;
+    templates.TemplateRenderer = TemplateRenderer;
     class PlainTextRenderer {
         constructor(text) {
             this.text = text;
@@ -14,9 +14,9 @@ var template;
             return this.text;
         }
     }
-    template.PlainTextRenderer = PlainTextRenderer;
+    templates.PlainTextRenderer = PlainTextRenderer;
     class JsonRenderer {
     }
-    template.JsonRenderer = JsonRenderer;
-})(template = exports.template || (exports.template = {}));
+    templates.JsonRenderer = JsonRenderer;
+})(templates = exports.templates || (exports.templates = {}));
 //# sourceMappingURL=templates.js.map
