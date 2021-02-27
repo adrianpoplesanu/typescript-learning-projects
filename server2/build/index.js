@@ -9,6 +9,7 @@ app.use(express.static('public'));
 let r = new router_1.router.Router();
 r.addRawRoute("/hello", base_1.BaseController, "index", "GET");
 r.addRawRoute("/buna-dimineata", base_1.BaseController, "index2", "GET");
+r.addRawRoute("/test", base_1.BaseController, "index3", "GET");
 //eval("console.log('testing eval');");
 let add_routes_listeners = function (r) {
     r.routes.forEach(function (route_bind) {

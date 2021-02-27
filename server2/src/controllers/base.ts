@@ -12,7 +12,12 @@ export class BaseController implements controller.ControllerInterface {
     }
 
     index2(req : any, res : any): string {
-        console.log(res);
+        //console.log(res);
         return 'Default response from BaseController with req/res params';
+    }
+
+    index3(req : any, res : any): string {
+        let renderer = new templates.PlainTextRenderer('plain text rendered from the template renderer')
+        return renderer.render()
     }
 }
